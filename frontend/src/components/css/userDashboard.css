@@ -1,0 +1,50 @@
+.user-dashboard {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  padding-top: 56px; /* Height of the fixed navbar */
+}
+
+.sidebar {
+  width: 220px;
+  min-height: calc(100vh - 56px);
+  position: fixed;
+  top: 56px; /* Height of the fixed navbar */
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+  background-color: white;
+  border-right: 1px solid #dee2e6;
+  overflow-y: auto;
+}
+
+.main-content {
+  margin-left: 220px; /* Same as sidebar width */
+  padding: 2rem;
+  width: calc(100% - 220px);
+  margin-top: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .sidebar {
+    width: 100%;
+    position: static;
+    min-height: auto;
+    border-right: none;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+.custom-card {
+  transition: transform 0.2s;
+}
+
+.custom-card:hover {
+  transform: scale(1.02);
+}

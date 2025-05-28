@@ -1,0 +1,257 @@
+/* Modal backdrop - the dark overlay */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Modal container */
+.modal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+/* Modal content */
+.modal-content {
+  width: 100%;
+  max-width: 500px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  animation: scaleIn 0.3s ease-out;
+}
+
+.modal-header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-body {
+  padding: 1rem;
+}
+
+.modal-footer {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.scale-in {
+  animation: scaleIn 0.3s ease-out;
+}
+
+/* Close button styles */
+.btn-close-custom {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 50%;
+}
+
+.btn-close-custom:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: rotate(90deg);
+}
+
+/* Action buttons styling */
+.btn-warning.btn-sm,
+.btn-danger.btn-sm {
+  transition: all 0.2s ease;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+
+.btn-warning.btn-sm:hover {
+  background-color: #e0a800;
+  border-color: #d39e00;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-danger.btn-sm:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-warning.btn-sm:active,
+.btn-danger.btn-sm:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Form elements styling */
+.modal-content input.form-control:focus {
+  border-color: #ffc107;
+  box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
+}
+
+/* SweetAlert2 custom styling */
+.swal2-popup {
+  border-radius: 10px !important;
+  font-family: inherit !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2) !important;
+}
+
+.swal2-title {
+  font-weight: 600 !important;
+  color: #333 !important;
+}
+
+.swal2-icon {
+  margin: 1.5rem auto 1rem !important;
+}
+
+.swal2-confirm {
+  background-color: #dc3545 !important;
+  border-radius: 4px !important;
+  font-weight: 500 !important;
+  padding: 0.5rem 1.5rem !important;
+  box-shadow: 0 4px 6px rgba(220, 53, 69, 0.2) !important;
+  transition: all 0.2s ease !important;
+}
+
+.swal2-confirm:hover {
+  background-color: #c82333 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 10px rgba(220, 53, 69, 0.3) !important;
+}
+
+.swal2-cancel {
+  background-color: #6c757d !important;
+  border-radius: 4px !important;
+  font-weight: 500 !important;
+  padding: 0.5rem 1.5rem !important;
+  box-shadow: 0 4px 6px rgba(108, 117, 125, 0.2) !important;
+  transition: all 0.2s ease !important;
+}
+
+.swal2-cancel:hover {
+  background-color: #5a6268 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 10px rgba(108, 117, 125, 0.3) !important;
+}
+
+/* Additional custom classes */
+.swal-wide {
+  width: 350px !important;
+  padding: 1.5rem !important;
+}
+
+.swal-title {
+  font-size: 1.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.swal-text {
+  line-height: 1.6 !important;
+  color: #666 !important;
+  font-size: 1rem !important;
+}
+
+.swal-text strong {
+  color: #dc3545 !important;
+  font-weight: 600 !important;
+}
+
+.swal-confirm,
+.swal-cancel {
+  font-size: 0.95rem !important;
+  margin-top: 0.5rem !important;
+}
+
+/* Success alert animation */
+.swal2-icon.swal2-success [class^=swal2-success-line] {
+  animation: succesLine 0.4s ease-in-out;
+}
+
+.swal2-icon.swal2-success .swal2-success-ring {
+  animation: successRing 0.5s ease-in-out;
+}
+
+@keyframes succesLine {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes successRing {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+} 

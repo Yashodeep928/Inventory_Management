@@ -1,0 +1,26 @@
+/* Navbar styles */
+.navbar {
+  z-index: 1030; /* Ensure navbar stays above other content */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Add padding to the body to account for fixed navbar */
+/* body {
+  padding-top: 56px; /* Height of the navbar */
+  /* min-height: 100vh;
+  display: flex;
+  flex-direction: column; */
+/* }  */
+
+/* Ensure main content takes up available space */
+.main-content {
+  flex: 1;
+  margin-top: 1rem;
+}
+
+/* Adjust for mobile view */
+@media (max-width: 991.98px) {
+  body {
+    padding-top: 56px;
+  }
+}
