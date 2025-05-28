@@ -1,27 +1,41 @@
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-
-# testing
-/coverage
-
-# production
-/build
-
-# misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
+# ===================================
+# Node.js dependencies
+# ===================================
+node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# IDE specific files
-.idea
-.vscode
+# ===================================
+# Build / Production / Coverage
+# ===================================
+build/
+dist/
+coverage/
+
+# ===================================
+# Environment Variables
+# ===================================
+.env
+.env.*      # includes .env.local, .env.development.local, etc.
+
+# ===================================
+# IDE & Editor Configs
+# ===================================
+.vscode/
+.idea/
 *.swp
-*.swo 
+*.swo
+
+# ===================================
+# OS & Misc Junk Files
+# ===================================
+.DS_Store
+Thumbs.db
+
+# ===================================
+# Sensitive Backend Files
+# ===================================
+backend/.env
+backend/testuser.js
+backend/hashedpassword.js
